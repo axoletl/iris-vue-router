@@ -8,7 +8,7 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js'
 
 export default {
-  name: 'Canvas',
+  name: 'MainCanvas',
 
   created() {
     this.sizes = {

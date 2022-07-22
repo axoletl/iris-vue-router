@@ -1,18 +1,18 @@
 <template>
-  <Canvas />
+  <MainCanvas />
 </template>
 
 <script>
-import Canvas from './components/Canvas.vue'
+import MainCanvas from './components/MainCanvas.vue'
 export default {
-  name: "App",
-  components: {
-    Canvas,
-  },
-  methods: {
+	name: 'App',
+	components: {
+		MainCanvas,
+	},
+	methods: {
 
-  }
-};
+	}
+}
 </script>
 
 <style lang="scss">

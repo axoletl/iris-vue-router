@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production --progress",
-    "lint": "npx eslint --fix \"*.vue\""
+    "lint": "npx eslint --fix \"src/**.vue\""
   },
   "babel": {
     "presets": [
