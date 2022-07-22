@@ -43,10 +43,10 @@ export default {
     this.light.position.set(0, 0, 10)
 
     this.cube = new THREE.Mesh(
-      new THREE.BoxBufferGeometry(1, 1, 1),
+      new THREE.BoxBufferGeometry(3, 3, 3),
       new THREE.MeshStandardMaterial({
         side: THREE.FrontSide,
-        color: 'hsl(0, 100%, 50%)',
+        map: new THREE.TextureLoader().load('../assets/images/test.png'),
       })
     )
 
