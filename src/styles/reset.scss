@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+:root {
+    font-size: 16px;
+}
+
+img,
+video,
+figure {
+    width: 100%;
+    height: auto;
+}
