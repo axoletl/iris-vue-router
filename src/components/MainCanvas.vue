@@ -29,7 +29,7 @@ export default {
     this.composer = new EffectComposer(this.renderer)
 
     this.scene = new THREE.Scene()
-    this.scene.background = new THREE.Color('hsl(0, 100%, 100%)')
+    this.scene.background = null
 
     this.camera = new THREE.PerspectiveCamera(
       75,
@@ -88,7 +88,7 @@ export default {
       this.camera.updateProjectionMatrix()
 
       // Update renderer
-      this.renderer.setSize(sizes.width, sizes.height)
+      this.renderer.setSize(this.sizes.width, this.sizes.height)
       this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5))
     },
   },
@@ -97,12 +97,18 @@ export default {
 
 <style lang="scss">
 .canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  pointer-events: none;
+  user-select: none;
 
   > canvas {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 </style>
