@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -10,6 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, "./dist"),
     filename: 'bundle.js',
   },
+  devtool: 'eval-source-map',
 
   plugins: [
     new CopyWebpackPlugin({
@@ -24,6 +26,10 @@ module.exports = {
     }),
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: false,
+    }),
   ],
 
   module: {

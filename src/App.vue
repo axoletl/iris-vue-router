@@ -7,7 +7,7 @@
     </div>
   </header>
   <main>
-	<MainCanvas />
+    <MainCanvas />
     <div class="b-container">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -24,7 +24,8 @@
       style="
         height: 200vh;
         border: 1px solid black;
-        margin: 1rem auto;
+        margin-top: 1rem;
+		margin-bottom: 1rem;
         padding: 1rem;
       "
     >
@@ -55,5 +56,9 @@ export default {
 .b-container {
   max-width: $b-lg;
   margin: 0 auto;
+
+  @media (max-width: $b-lg) {
+    margin: 0 2rem;
+  }
 }
 </style>
