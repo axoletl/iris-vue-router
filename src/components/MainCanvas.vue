@@ -125,10 +125,10 @@ export default {
       this.composer.render()
     },
     resize() {
-      // this.sizes.width = window.innerWidth
-      // this.sizes.height = window.innerHeight
-      this.sizes.width = this.$refs.canvas.clientWidth //WIP, still some initial popping? and canvas is cut when address bar shown
-      this.sizes.height = this.$refs.canvas.clientHeight
+      if (this.$refs.canvas) {
+        this.sizes.width = this.$refs.canvas.clientWidth //WIP, still some initial popping? and canvas is cut when address bar shown
+        this.sizes.height = this.$refs.canvas.clientHeight
+      }
 
       this.camera.aspect = this.sizes.width / this.sizes.height
       this.camera.updateProjectionMatrix()

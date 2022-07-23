@@ -1,6 +1,12 @@
 <template>
   <header>
-    <div class="b-container">
+    <div
+      class="b-container"
+      style="
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      "
+    >
       <h1>Iris Three + Vue Starter</h1>
       <br />
       <h2>(+Webpack and Sass)</h2>
@@ -24,12 +30,12 @@
       style="
         height: 200vh;
         border: 1px solid black;
-        margin-top: 1rem;
-		margin-bottom: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         padding: 1rem;
       "
     >
-      <h3>Scroll test div</h3>
+      <h3>Scroll test DIV</h3>
     </div>
   </main>
   <footer></footer>
