@@ -1,7 +1,8 @@
 <template>
   <header>
-    <h1>Iris Three + Vue Starter</h1><br>
-	<h2>(+Webpack and Sass)</h2>
+    <h1>Iris Three + Vue Starter</h1>
+    <br />
+    <h2>(+Webpack and Sass)</h2>
   </header>
   <main>
     <p>
@@ -14,7 +15,9 @@
       est laborum
     </p>
     <MainCanvas />
-	<div style="height: 200vh"></div>
+    <div style="height: 200vh; border: 1px solid black; margin: 1rem; padding: 1rem;">
+      <h3>Scroll test div</h3>
+    </div>
   </main>
   <footer></footer>
 </template>
@@ -22,13 +25,13 @@
 <script>
 import MainCanvas from './components/MainCanvas.vue'
 export default {
-  name: 'App',
-  components: {
-    MainCanvas,
-  },
-  methods: {
+	name: 'App',
+	components: {
+		MainCanvas,
+	},
+	methods: {
 
-  }
+	}
 }
 </script>
 
