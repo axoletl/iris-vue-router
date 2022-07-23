@@ -1,6 +1,6 @@
 ## Iris' Three + Vue Starter (+Webpack and Sass)
 
-# I Am So Tired Of Setting Up Webpack ThreeJS Projects.
+I Am So Tired Of Setting Up Webpack ThreeJS Projects.
 
 
 
