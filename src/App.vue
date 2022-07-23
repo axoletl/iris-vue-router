@@ -1,12 +1,6 @@
 <template>
   <header>
-    <div
-      class="b-container"
-      style="
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-      "
-    >
+    <div class="b-container" style="margin-top: 2rem; margin-bottom: 2rem">
       <h1>Iris Three + Vue Starter</h1>
       <br />
       <h2>(+Webpack and Sass)</h2>
