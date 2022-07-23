@@ -43,7 +43,7 @@ export default {
     this.light.position.set(0, 0, 10)
 
     this.cube = new THREE.Mesh(
-      new THREE.BoxBufferGeometry(3, 3, 3),
+      new THREE.BoxBufferGeometry(2, 2, 2),
       new THREE.MeshStandardMaterial({
         side: THREE.FrontSide,
         map: new THREE.TextureLoader().load('../assets/images/test.png'),
@@ -80,8 +80,10 @@ export default {
     },
     resize() {
       // Update sizes
-      this.sizes.width = window.innerWidth
-      this.sizes.height = window.innerHeight
+      // this.sizes.width = window.innerWidth
+      // this.sizes.height = window.innerHeight
+      this.sizes.width = this.$refs.canvas.clientWidth //WIP, still some initial popping? and canvas is cut when address bar shown
+      this.sizes.height = this.$refs.canvas.clientHeight
 
       // Update camera
       this.camera.aspect = this.sizes.width / this.sizes.height
