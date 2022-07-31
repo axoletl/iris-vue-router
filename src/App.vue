@@ -51,7 +51,6 @@ export default {
 <style lang="scss">
 @import "./styles/vars.scss";
 @import "./styles/reset.scss";
-@import "./styles/typography.scss";
 
 .b-container {
   max-width: $b-lg;

@@ -51,7 +51,18 @@ module.exports = {
       // STYLE
       {
         test: /\.(scss|css)$/,
-        use: ["vue-style-loader", "css-loader", "postcss-loader", "sass-loader"]
+        use: ["vue-style-loader", "css-loader", "postcss-loader",
+          {
+            loader: 'sass-loader',
+            options: {
+              additionalData: `
+              @import "./src/styles/vars.scss";
+              @import "./src/styles/reset.scss";
+              @import "./src/styles/typography.scss";
+            `
+            }
+          },
+        ]
       },
     ],
   },
