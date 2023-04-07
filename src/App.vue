@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="b-container" style="margin-top: 2rem; margin-bottom: 2rem">
+    <div class="container" style="margin-top: 2rem; margin-bottom: 2rem">
       <h1>Iris Three + Vue Starter</h1>
       <br />
       <h2>(+Webpack and Sass)</h2>
@@ -8,7 +8,7 @@
   </header>
   <main>
     <MainCanvas />
-    <div class="b-container">
+    <div class="container">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -20,7 +20,7 @@
       </p>
     </div>
     <div
-      class="b-container"
+      class="container"
       style="
         height: 200vh;
         border: 1px solid black;
@@ -51,13 +51,5 @@ export default {
 <style lang="scss">
 @import "./styles/vars.scss";
 @import "./styles/reset.scss";
-
-.b-container {
-  max-width: $b-lg;
-  margin: 0 auto;
-
-  @media (max-width: $b-lg) {
-    margin: 0 2rem;
-  }
-}
+@import "./styles/base.scss";
 </style>

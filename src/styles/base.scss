@@ -1,0 +1,31 @@
+.container {
+    max-width: $b-xl;
+    width: $b-xl;
+    margin: 0 auto;
+
+    @media (max-width: $b-xl) {
+        max-width: $b-lg;
+        width: $b-lg;
+    }
+
+    @media (max-width: $b-lg) {
+        max-width: $b-md;
+        width: $b-md;
+    }
+
+    @media (max-width: $b-md) {
+        max-width: $b-sm;
+        width: $b-sm;
+    }
+
+    @media (max-width: $b-sm) {
+        max-width: $b-xs;
+        width: $b-xs;
+    }
+    
+    @media (max-width: $b-xs) {
+        max-width: calc(100% - #{$gutter * 2});
+        width: calc(100% - #{$gutter * 2});
+        margin: 0 $gutter;
+    }
+}
