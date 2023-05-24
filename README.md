@@ -1,4 +1,4 @@
-## Iris' Three + Vue Starter (+Webpack and Sass)
+## Iris' Vue router + Vue Starter (+Webpack and Sass)
 
 I Am So Tired Of Setting Up Webpack ThreeJS Projects.
 

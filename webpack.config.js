@@ -11,13 +11,18 @@ module.exports = {
     path: path.resolve(__dirname, "./dist"),
     filename: 'bundle.js',
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      'vue': 'vue/dist/vue.esm-bundler.js',
+    }
+  },
   devtool: 'eval-source-map',
-
+  stats: 'minimal',
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
         { from: path.resolve(__dirname, './public') },
-        { from: path.resolve(__dirname, './src/assets'), to: path.resolve(__dirname, './dist/assets') },
       ]
     }),
     new HtmlWebpackPlugin({
@@ -56,19 +61,23 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               additionalData: `
-              @import "./src/styles/vars.scss";
-              @import "./src/styles/reset.scss";
-              @import "./src/styles/typography.scss";
+              @import "./src/styles/_vars.scss";
             `
             }
           },
         ]
       },
+      // IMG / ASSETS
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file-loader',
+      }
     ],
   },
 
   devServer: {
     //static files paths to watch for reload
+    open: false,
     static: [
       path.resolve(__dirname, './public'),
       path.resolve(__dirname, './src/assets'),
